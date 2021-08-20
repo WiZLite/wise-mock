@@ -1,0 +1,225 @@
+body {
+    --primary-color: #37517e;
+    --dark-color: #2a3a69;
+}
+  
+body {
+    background: #37517e;
+}
+
+
+.dropdown {
+    width: 1em;
+    height: 1em;
+    z-index: 100;
+    transform:rotate(180deg);
+    margin-left: auto;
+    fill: rgb(0,185,255);
+    padding-bottom: 2px;
+   }
+
+.currency-flag {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    margin: 4px;
+    background-size: cover;
+    background-image: url(https://wise.com/public-resources/assets/flags/rectangle_fallback.png);
+
+    &.currency-flag-jpy {
+        background-image: url(https://wise.com/public-resources/assets/flags/rectangle/jpy.png);
+    }
+    &.currency-flag-usd {
+        background-image: url(https://wise.com/public-resources/assets/flags/rectangle/usd.png);
+    }
+    &.currency-flag-eur {
+        background-image: url(https://wise.com/public-resources/assets/flags/rectangle/eur.png);
+    }
+}
+
+.layout {
+display: flex;
+justify-content: center;
+}
+  
+hr {
+    z-index: 10;
+    width: 100%;
+    height: 0;
+    border-top-width: 1px;
+    border-color: rgba(46,67,105,.5);
+
+}
+
+// <svg class="turnover flex-right dd-icon" width="16" height="16" fill="currentColor" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 4l-6.6 6.653L2.537 11.8 8 6.293l5.463 5.507 1.137-1.147L8 4z"></path></svg>
+.transfer-select {
+    display: flex;
+    box-sizing: border-box;
+    width: 10em;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    flex-grow: 0;
+    width: 30%;
+    background-color: #2e4369;
+    border-radius: 2px;
+    padding: 4px 8px;
+    margin-right: 5px;
+}
+  .root {
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-position: center center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIxIiBoZWlnaHQ9IjEwOTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDBoMzIxdjEwOThIMFYweiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPjxtYXNrIGlkPSJhIiBtYXNrLXR5cGU9ImFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMzIxIiBoZWlnaHQ9IjEwOTgiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAwaDMyMXYxMDk4SDBWMHoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcikiLz48L21hc2s+PGcgbWFzaz0idXJsKCNhKSI+PHBhdGggb3BhY2l0eT0iLjMiIGZpbGw9IiMyNTNBNjkiIGZpbGwtb3BhY2l0eT0iLjUiIGQ9Ik0tMzM4IDEwMzMuOTlMMTE1LjA2Ny03Ljk5MmwzMjIuNTc4IDE0MC4yNjFMLTE1LjQyIDExNzQuMjUxeiIvPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIzMjEiIHkxPSI2Ny44OTMiIHgyPSItMjM4LjA4NyIgeTI9IjE2OTUuMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iLjMwMSIgc3RvcC1jb2xvcj0iIzNDNTE3QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzRBNUZDMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyIiB4MT0iMzIxIiB5MT0iNjcuODkzIiB4Mj0iLTIzOC4wODciIHkyPSIxNjk1LjIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4zMDEiIHN0b3AtY29sb3I9IiMzQzUxN0IiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0QTVGQzAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=);
+    font-family: Averta,Avenir W02,Avenir,Helvetica,Arial,sans-serif;
+    color: white;
+    width: 400px;
+    .input-select-container {
+      display: flex;
+      background: white;
+      height: 60px;
+      border-radius: 3px;
+      .select {
+        border-radius: 0 3px 3px 0;
+        flex-grow: 0;
+        width: 30%;
+        background-color: #2e4369;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      .input-container {
+        flex-grow: 3;
+        height: 100%;
+        border-radius: 4px;
+        label {
+          position: absolute;
+          margin: 8px;
+          font-size: .9em;
+          color: gray;
+        }
+        .input {
+            border-radius: 4px;
+            display: flex;
+            font-size: 1.2em;
+            padding-top: 1.5em;
+            padding-left: 1em;
+            box-sizing: border-box;
+            color: #222;
+            z-index: 2;
+            background: white;
+            height: 100%;
+            width: 100%;
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      li:first-child {
+        padding-top: 12px;
+      }
+      li:last-child {
+        padding-bottom: 12px;
+      }
+      li {
+        color: var(--dark-color);
+        margin: 0;
+        padding: 5px 0;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        line-height: 24px;
+        font-size: .875rem; 
+
+        span:first-child {
+          color: white;
+          min-width: 96px;
+        }
+
+        span:nth-child(2) {
+            color: white;
+            min-width: 120px;
+        }
+
+        &.dim > span {
+            color: lightgray;
+        }
+        --icon-color: rgb(37,54,85);
+
+        // 縦長の線
+        &::after {
+          position: absolute;
+          top: 0%;
+          left: -20px;
+          background-color: var(--icon-color);
+          height: 100%;
+          z-index: 0;
+          width: 4px;
+          content: "";
+          box-sizing: content-box;
+        }
+
+        // beforeが丸いやつ
+        &::before {
+            position: absolute;
+            box-sizing: border-box;
+            top: calc(50% - 5px); // 中心 - 自分の高さ
+            left: -23px;
+            content: "";
+            background-color: var(--icon-color);
+            z-index: 1;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        // 最初のChildのliのpadding-topの分
+        &:first-child::before {
+            top: calc(50% - 2px);
+        }
+
+        // 最後のChildのliのpadding-bottomの分
+        &.icon:last-child::before {
+            top: calc(50% - 17px);
+        }
+
+        &.icon::before {
+            position: absolute;
+            box-sizing: border-box;
+            top: calc(50% - 13.5px); // 中心 - 自分の高さ（を元にした決め打ち調整）
+            left: -30.5px;
+            color: white;
+            z-index: 1;
+            text-align:center;
+            background-color: var(--icon-color);
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+        }
+
+        &.icon.minus::before {
+            content: "ー";
+            font-size: .8em;
+            padding-top: .2em;
+        }
+
+        &.icon.equals::before {
+            content: "=";
+            font-size: 1.1em;
+            padding-top: .1em;
+        }
+
+        &.icon.divide::before {
+            content: "÷";
+            font-size: 1.1em;
+            padding-top: .1em;
+        }
+      }
+    }
+  }
+  
