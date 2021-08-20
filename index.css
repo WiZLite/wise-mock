@@ -2,10 +2,9 @@
 body {
   --primary-color: #37517e;
   --dark-color: #2a3a69;
-}
-
-body {
-  background: #37517e;
+  --light-color: rgb(0,185,255);
+  --icon-color: rgb(37,54,85);
+  --select-color: #2e4369;
 }
 
 .dropdown {
@@ -14,7 +13,7 @@ body {
   z-index: 100;
   transform: rotate(180deg);
   margin-left: auto;
-  fill: #00b9ff;
+  fill: var(--light-color);
   padding-bottom: 2px;
 }
 
@@ -58,10 +57,10 @@ hr {
   color: white !important;
   flex-grow: 0;
   width: 30%;
-  background-color: #2e4369;
   border-radius: 2px;
   padding: 4px 8px;
   margin-right: 5px;
+  background-color: var(--select-color);
 }
 
 .root {
@@ -72,6 +71,7 @@ hr {
   font-family: Averta, Avenir W02, Avenir, Helvetica, Arial, sans-serif;
   color: white;
   width: 400px;
+  padding: 12px;
 }
 .root .input-select-container {
   display: flex;
@@ -83,7 +83,7 @@ hr {
   border-radius: 0 3px 3px 0;
   flex-grow: 0;
   width: 30%;
-  background-color: #2e4369;
+  background-color: var(--select-color);
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -135,7 +135,6 @@ hr {
   position: relative;
   line-height: 24px;
   font-size: 0.875rem;
-  --icon-color: rgb(37,54,85);
 }
 .root ul li span:first-child {
   color: white;

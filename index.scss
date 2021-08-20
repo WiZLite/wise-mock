@@ -1,12 +1,12 @@
 body {
     --primary-color: #37517e;
     --dark-color: #2a3a69;
+    --light-color: rgb(0,185,255);
+
+    --icon-color: rgb(37,54,85);
+    --select-color: #2e4369;
 }
   
-body {
-    background: #37517e;
-}
-
 
 .dropdown {
     width: 1em;
@@ -14,7 +14,7 @@ body {
     z-index: 100;
     transform:rotate(180deg);
     margin-left: auto;
-    fill: rgb(0,185,255);
+    fill: var(--light-color);
     padding-bottom: 2px;
    }
 
@@ -61,10 +61,11 @@ hr {
     color: white !important;
     flex-grow: 0;
     width: 30%;
-    background-color: #2e4369;
+    // background-color: #2e4369;
     border-radius: 2px;
     padding: 4px 8px;
     margin-right: 5px;
+    background-color: var(--select-color);
 }
   .root {
     background-color: var(--primary-color);
@@ -74,6 +75,7 @@ hr {
     font-family: Averta,Avenir W02,Avenir,Helvetica,Arial,sans-serif;
     color: white;
     width: 400px;
+    padding: 12px;
     .input-select-container {
       display: flex;
       background: white;
@@ -83,7 +85,7 @@ hr {
         border-radius: 0 3px 3px 0;
         flex-grow: 0;
         width: 30%;
-        background-color: #2e4369;
+        background-color: var(--select-color);
         color: white;
         font-size: 20px;
         font-weight: bold;
@@ -149,7 +151,6 @@ hr {
         &.dim > span {
             color: lightgray;
         }
-        --icon-color: rgb(37,54,85);
 
         // 縦長の線
         &::after {
