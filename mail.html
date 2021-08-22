@@ -1,0 +1,190 @@
+<style>
+    td {
+        padding: 0;
+        vertical-align: middle;
+    }
+
+    .label {
+        color: gray;
+        font-size: .8rem;
+    }
+
+    .select1 {
+        width: 110px;
+        background-color: #00005f;
+        color: white;
+        border-radius: 0 4px 4px 0;
+        padding: 8px;
+    }
+    .select1 span {
+        font-size: bold;
+    }
+    .select2 {
+        display: inline-block;
+        padding: 7px 11px;
+        box-sizing: border-box;
+        background-color: #00005f;
+        color: white;
+        font-size: .7rem;
+        border-radius: 2px;
+    }
+    
+    .li-dot-small {
+        display: inline-block;
+        position: absolute;
+        top: 16px;
+        left: 22px;
+        border-radius: 2px;
+        width: 6px;
+        height: 6px; background-color: #00004f;
+    }
+    .li-dot-icon {
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        top: 11px;
+        left: 16.5px;
+        border-radius: 4px;
+        width: 17px;
+        height: 17px; background-color: #00004f;
+        color: white;
+        z-index: 2;
+        font-size: 1rem;
+    }
+    .li-dot-icon.minus {
+        font-size: .8rem;
+    }
+    .li-line {
+        display: inline-block;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 1.5px;
+        height: 100%;
+        background-color: #050552;
+    }
+
+    .li {
+        height: 40px;
+        padding: 0;
+        font-size: .9rem;
+        color: rgb(88, 88, 88);
+    }
+
+    b {
+        color:black;
+    }
+
+    .li > td:first-child {
+        text-align: center;
+        color: #00003f; position: relative; width: 50px; padding: 0;
+    }
+
+  hr {
+      z-index: 10;
+      width: 100%;
+      height: 0;
+      border-top-width: 1px;
+      border-color: rgba(12, 12, 14, 0.5);
+  
+  }
+
+    .currency-flag {
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  margin: 4px;
+  background-size: cover;
+  background-image: url(https://wise.com/public-resources/assets/flags/rectangle_fallback.png);
+}
+.currency-flag.jpy {
+  background-image: url(https://wise.com/public-resources/assets/flags/rectangle/jpy.png);
+}
+.currency-flag.usd {
+  background-image: url(https://wise.com/public-resources/assets/flags/rectangle/usd.png);
+}
+.currency-flag.eur {
+  background-image: url(https://wise.com/public-resources/assets/flags/rectangle/eur.png);
+}
+
+.dropdown-mark::after {
+    content: "▼";
+    color: skyblue;
+    margin-left: 6px;
+}
+
+</style>
+
+<div style="width: 400px; padding: 24px; background-color: #c2c2c2; 
+font-family: Averta,Avenir W02,Avenir,Helvetica,Arial,sans-serif;">
+
+    <table style="width:100%; margin: 0px; padding: 0; border-collapse: collapse;">
+        <tr style="padding: 0;">
+            <td style="background-color: white; border-radius: 3px 0 0 3px; padding: 8px;">
+                <div class="label">You send</div>
+                <span style="font-size: 1.1rem;">200,000</span>
+            </td>
+            <td class="select1">
+                <span class="currency-flag usd" style="position: relative; top: 3px; margin-right: 4px;"></span>
+                <span style="font-weight: bold; position: relative; top: -3px;">USD <span class="dropdown-mark"></span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="list-table" style="width: 100%; border-collapse: collapse;">
+        <tr class="li">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;">
+                <span class="li-dot-small"></span>
+                <span class="li-line"></span>
+            </td>
+            <td style="color: rgb(95, 95, 95);">4.14 USD</td><td><span class="select2">Wire Transfer <span class="dropdown-mark" /></span></td>
+        </tr>
+        <tr class="li">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;">
+                <span class="li-dot-small"></span>
+                <span class="li-line"></span>
+            </td>
+            <td style="color: rgb(95, 95, 95);">956.06 USD</td><td>Our fee</td>
+        </tr>
+        <tr class="li">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;">
+                <span class="li-dot-icon minus">ー</span>
+                <span class="li-line"></span>
+            </td>
+            <td style="color: rgb(95, 95, 95);"><b>960.20 USD</b> (0.48)</td><td>Total fees</td>
+        </tr>
+        <tr class="li" style="height: 20px;">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;" >
+                <span class="li-line"></span>
+            </td>
+            <td colspan="2"><hr/></td>
+        </tr>
+        <tr class="li">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;">
+                <span class="li-dot-icon">=</span>
+                <span class="li-line"></span>
+            </td>
+            <td style="color: rgb(95, 95, 95);">199,039.80 USD</td><td>Amount we’ll convert</td>
+        </tr>
+        <tr class="li">
+            <td style="color: #00003f; position: relative; width: 50px; padding: 0;">
+                <span class="li-dot-icon">×</span>
+                <span class="li-line"></span>
+            </td>
+            <td style="color: blue; font-weight: bold;">109.785</td>
+            <td>Guaranteed fee (37hrs)</td>
+        </tr>
+    </table>
+    <table style="width:100%; margin: 0px; padding: 0; border-collapse: collapse;">
+        <tr style="padding: 0;">
+            <td style="background-color: white; border-radius: 3px 0 0 3px; padding: 8px;">
+                <div class="label">Recipient gets</div>
+                <span style="font-size: 1.1rem;">25,574,892</span>
+            </td>
+            <td class="select1">
+                <span class="currency-flag jpy" style="position: relative; top: 3px; margin-right: 4px;"></span>
+                <span style="font-weight: bold; position: relative; top: -3px;">JPY <span class="dropdown-mark" /></span>
+            </td>
+        </tr>
+    </table>
+</div>

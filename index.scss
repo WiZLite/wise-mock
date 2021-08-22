@@ -1,10 +1,13 @@
 body {
-    --primary-color: #37517e;
-    --dark-color: #2a3a69;
+    // --primary-color: #37517e;
+    --primary-color: #c2c2c2;
+    --dark-color: #692a2a;
     --light-color: rgb(0,185,255);
 
     --icon-color: rgb(37,54,85);
-    --select-color: #2e4369;
+    --select-color: #00003f;
+    --dim-text-color: gray;
+    --text-color: black;
 }
   
 
@@ -53,13 +56,9 @@ hr {
 
 // <svg class="turnover flex-right dd-icon" width="16" height="16" fill="currentColor" focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 4l-6.6 6.653L2.537 11.8 8 6.293l5.463 5.507 1.137-1.147L8 4z"></path></svg>
 .transfer-select {
-    display: flex;
     box-sizing: border-box;
     width: 10em;
-    justify-content: center;
-    align-items: center;
     color: white !important;
-    flex-grow: 0;
     width: 30%;
     // background-color: #2e4369;
     border-radius: 2px;
@@ -71,7 +70,6 @@ hr {
     background-color: var(--primary-color);
     background-size: cover;
     background-position: center center;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIxIiBoZWlnaHQ9IjEwOTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDBoMzIxdjEwOThIMFYweiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPjxtYXNrIGlkPSJhIiBtYXNrLXR5cGU9ImFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMzIxIiBoZWlnaHQ9IjEwOTgiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAwaDMyMXYxMDk4SDBWMHoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcikiLz48L21hc2s+PGcgbWFzaz0idXJsKCNhKSI+PHBhdGggb3BhY2l0eT0iLjMiIGZpbGw9IiMyNTNBNjkiIGZpbGwtb3BhY2l0eT0iLjUiIGQ9Ik0tMzM4IDEwMzMuOTlMMTE1LjA2Ny03Ljk5MmwzMjIuNTc4IDE0MC4yNjFMLTE1LjQyIDExNzQuMjUxeiIvPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIzMjEiIHkxPSI2Ny44OTMiIHgyPSItMjM4LjA4NyIgeTI9IjE2OTUuMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iLjMwMSIgc3RvcC1jb2xvcj0iIzNDNTE3QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzRBNUZDMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyIiB4MT0iMzIxIiB5MT0iNjcuODkzIiB4Mj0iLTIzOC4wODciIHkyPSIxNjk1LjIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4zMDEiIHN0b3AtY29sb3I9IiMzQzUxN0IiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0QTVGQzAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=);
     font-family: Averta,Avenir W02,Avenir,Helvetica,Arial,sans-serif;
     color: white;
     width: 400px;
@@ -139,17 +137,17 @@ hr {
         font-size: .875rem; 
 
         span:first-child {
-          color: white;
+          color: var(--text-color);
           min-width: 96px;
         }
 
         span:nth-child(2) {
-            color: white;
+            color: var(--text-color);
             min-width: 120px;
         }
 
         &.dim > span {
-            color: lightgray;
+            color: var(--dim-text-color);
         }
 
         // 縦長の線
@@ -160,23 +158,24 @@ hr {
           background-color: var(--icon-color);
           height: 100%;
           z-index: 0;
-          width: 4px;
+          width: 1.5px;
           content: "";
           box-sizing: content-box;
         }
 
         // beforeが丸いやつ
-        &::before {
+        &:not(.hr)::before {
             position: absolute;
             box-sizing: border-box;
             top: calc(50% - 5px); // 中心 - 自分の高さ
-            left: -23px;
+            // left: -22.8px;
+            left: -22px;
             content: "";
             background-color: var(--icon-color);
             z-index: 1;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
+            border-radius: 2px;
+            width: 6px;
+            height: 6px;
         }
 
         // 最初のChildのliのpadding-topの分
@@ -193,12 +192,12 @@ hr {
             position: absolute;
             box-sizing: border-box;
             top: calc(50% - 13.5px); // 中心 - 自分の高さ（を元にした決め打ち調整）
-            left: -30.5px;
+            left: -31.5px;
             color: white;
             z-index: 1;
             text-align:center;
             background-color: var(--icon-color);
-            border-radius: 50%;
+            border-radius: 8px;
             width: 25px;
             height: 25px;
         }
@@ -206,19 +205,19 @@ hr {
         &.icon.minus::before {
             content: "ー";
             font-size: .8em;
-            padding-top: .2em;
+            padding-top: .1em;
         }
 
         &.icon.equals::before {
             content: "=";
             font-size: 1.1em;
-            padding-top: .1em;
+            padding-top: .08em;
         }
 
         &.icon.divide::before {
             content: "÷";
             font-size: 1.1em;
-            padding-top: .1em;
+            padding-top: .08em;
         }
       }
     }
